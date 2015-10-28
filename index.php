@@ -18,8 +18,8 @@
            
            require_once("pages/" .$page);
     
-    } else {
+    	} else {
           
           require_once("pages/404.php");
          	
-      }
+      	}
