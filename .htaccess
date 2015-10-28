@@ -1,0 +1,11 @@
+# enable basic rewriting
+RewriteEngine on
+
+# prevent folder listing
+Options All -Indexes
+
+#  Rules
+RewriteRule ^$ index.php/ [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [QSA,L]
