@@ -1,10 +1,18 @@
 <?php
 	
+	// Pages file type
+	
+	$type = '.php';
+	
+	// Get page from url
+	
 	$url = explode( '/', $_SERVER['PATH_INFO'] );
 	
 	array_shift( $url );
 	
-	$page = (empty($url[0])) ? 'index.php' : strtolower($url[0]).'.php';
+	$page = (empty($url[0])) ? 'index'.$type : strtolower($url[0]).$type;
+	
+	// Get static page
 	
 	if ( file_exists("pages/" .$page) ) {
            
