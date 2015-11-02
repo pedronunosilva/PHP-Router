@@ -10,7 +10,8 @@
 	
 	array_shift( $url );
 	
-	$page = (empty($url[0])) ? 'index'.$type : strtolower($url[0]).$type;
+	$page = (empty($url[0])) ? 'index' : strtolower($url[0]);
+	$page.=$type;
 	
 	// Get static page
 	
